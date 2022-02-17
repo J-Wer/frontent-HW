@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> freeCodeCamp Survey Form</title>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
+
+      body {
+         color: #f3f3f3;
+         background-image: linear-gradient(115deg, rgba(58, 58, 158, .8), rgba(136, 136, 206, .7)),
+            url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+         background-size: cover;
+         background-position: center;
+         background-attachment: fixed;
+         padding-top: 32;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .center {
+         text-align: center;
+      }
+
+      .subheading {
+         font-family: italic;
+         font-size: 112%;
+      }
+
+      #form {
+
+         background-color: rgba(27, 27, 50, 0.8);
+         max-width: 700px;
+         margin: auto;
+         margin-top: 29px;
+         padding: 40px;
+      }
+
+      label {
+         display: block;
+      }
+
+      h1 {
+         margin: 0;
+         font-weight: normal;
+      }
+
+      .questionText {
+         font-size: 110%;
+      }
+      .wideinput{
+
+      }
+   </style>
+</head>
+
+<body>
+   <h1 class='center'>
+      freeCodeCamp Survey Form
+   </h1>
+   <div class='subheading center'> Thank you for taking the time to help us improve the platform
+   </div>
+   <div id='form'>
+      <div class="question">
+         <div class="questionText">Name</div>
+         <input type="text" class='wideInput' placeholder="Enter your name">
+      </div>
+      <div class="question">
+         <div class="questionText">Email</div>
+         <input type="text" placeholder="Enter your Email">
+      </div>
+      <div class="question">
+         <div class="questionText">Age
+            <small>(optional)</small>
+         </div>
+         <input type="number">
+      </div>
+      <div class="question">
+         <div class="questionText">Which option best describes your current role?
+         </div>
+         <select>
+            <option>Select current role</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+         </select>
+      </div>
+      <div class="question">
+         <div class="questionText">Would you recommend freeCodeCamp to a friend?
+         </div>
+         <label>
+            <input type="radio" name="recommend"> Definitely
+         </label>
+         <label>
+            <input type="radio" name="recommend"> Maybe
+         </label>
+         <label>
+            <input type="radio" name="recommend"> Not sure
+         </label>
+      </div>
+      <div class="question">
+         <div class="questionText">What is your favorite feature of freeCodeCamp?
+         </div>
+         <select>
+            <option disabled selected> Select an option</option>
+            <option>Challenges</option>
+            <option> Projects</option>
+            <option>Community</option>
+            <option>OpenSourse</option>
+         </select>
+      </div>
+      <div class="question">
+         <div class="questionText">What would you like to see improved?</div>
+         <small>(Check all that apply)</small>
+      </div>
+      <div>
+         <label>
+            <label><input type="checkbox">Front-end Projects</label>
+            <label><input type="checkbox">Back-end Projects</label>
+            <label><input type="checkbox">Data Visualization</label>
+            <label><input type="checkbox">Challenges</label>
+            <label><input type="checkbox">Open Source Community</label>
+            <label><input type="checkbox">Gitter help rooms</label>
+            <label><input type="checkbox">Videos</label>
+            <label><input type="checkbox">City Meetups</label>
+            <label><input type="checkbox">Wiki</label>
+            <label><input type="checkbox">Forum</label>
+            <label><input type="checkbox">Additional Courses
+            </label>
+      </div>
+      <div class="question">
+         <div class="questionText">Any comments or suggestions?</div>
+         <textarea placeholder="Enter your comment here..."></textarea>
+      </div>
+      <button>Submit</button>
+   </div>
+
+
+</body>
+
+</html>

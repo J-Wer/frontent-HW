@@ -1,0 +1,47 @@
+Некоторые HTML теги, которые могут пригодиться:
+
+div
+h1
+p
+form
+label
+input (атрибуты: type, name, placeholder, checked)
+span
+select
+   option (атрибуты: disabled, selected)
+textarea
+button
+
+Некоторые CSS свойства, которые могут пригодиться:
+
+font-family: 'Poppins', sans-serif;
+font-size
+font-weight
+line-height
+color
+font-style: italic;
+text-shadow
+
+
+text-align
+margin
+padding
+background-color
+box-shadow
+
+border
+border-radius
+width
+height
+max-width
+cursor
+resize
+
+transition
+
+display
+
+background-image
+background-size
+background-position
+background-attachment

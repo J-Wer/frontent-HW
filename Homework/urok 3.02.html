@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- 6.1) Создайте два поля: "множитель 1" и "множитель 2" и кнопку "умножить". 
+         При нажатии на кнопку поля очищаются, а ниже появляется текст вида "множитель1 * множитель2 = произведение". 
+         Пример: если ввести 4 и 5, получится текст "4 * 5 = 20". -->
+        <input id="m1" type="text" placeholder="множитель 1"> <br>
+        <input id="m2" type="text" placeholder="множитель 2"><br>
+        <button id="multiply">
+            Умножить
+        </button> <br>
+        <span id="mSpan"></span>
+
+        <script>
+            'use strict';
+            multiply.onclick = function () {
+                /* let x = 10;
+                console.log(x);//10 */
+                let x = m1.value;
+                let y = m2.value;
+                mSpan.innerHTML = x + "*" + y + "=" + (Number(x) * Number(y));
+                m1.value = "";
+                m2.value = "";
+            }
+        </script>
+
+
+        <!-- 6.2) Создайте три поля: оттенок, насыщенность, светлота, а также кнопку. Если ввести значения (обозначим их h,s,l) и нажать кнопку, то ниже появится текст вида "hsl(h,s,l)" в соответствии с введённым значениями, который будет иметь соответствующий цвет. Пример: если ввести значения "0", "100%", "50%", то выведется текст "hsl(0,100%,50%)" красного цвета. -->
+
+        <br><br>
+        <input id="h" type="text" placeholder="оттенок"> <br>
+        <input id="s" type="text" placeholder="насыщенность">, %<br>
+        <input id="l" type="text" placeholder="светлота">, %<br>
+        <button id="colorText">
+            Применить
+        </button> <br>
+        <span id="colorSpan"></span>
+
+
+        <!-- 6.3) Добавьте кнопки "Увеличить оттенок на 10" и "Уменьшить оттенок на 10", при нажатии на которые меняется число, отвечающее за оттенок, обновляется текст и цвет этого текста. -->
+
+        <br>
+        <button id="hueMore">
+            Увеличить оттенок на 10
+        </button> 
+        <button id="hueLess">
+            Уменьшить оттенок на 10
+        </button>
+
+        <script>
+            'use strict';
+
+            let x,y,z;
+            /* let y;
+            let z; */
+
+            colorText.onclick = function () {
+                x = h.value;
+                y = s.value+"%";
+                z = l.value+"%";
+                //let newValue="hsl("+x+","+y+","+z+")";
+                let newValue=`hsl(${x},${y},${z})`;
+                colorSpan.innerHTML = newValue;
+                colorSpan.style.color = newValue;
+            }
+
+            hueMore.onclick=function(){
+                x=Number(x)+10;
+                colorSpan.innerHTML = "hsl("+x + ", " + y + ", " + z + ")";
+                colorSpan.style.color="hsl("+x + ", " + y + ", " + z + ")";
+            }
+
+            hueLess.onclick=function(){
+                x=Number(x)-10;
+                colorSpan.innerHTML = "hsl("+x + ", " + y + ", " + z + ")";
+                colorSpan.style.color="hsl("+x + ", " + y + ", " + z + ")";
+            }
+        </script>
+
+        
+
+        <!-- <script>
+
+            2-е задание
+
+            'use strict';
+            colorText.onclick = function () {
+                let x = h.value;
+                let y = s.value+"%";
+                let z = l.value+"%";
+                colorSpan.innerHTML = "hsl("+x + ", " + y + ", " + z + ")";
+                colorSpan.style.color="hsl("+x + ", " + y + ", " + z + ")";
+                h.value = "";
+                s.value = "";
+                l.value = "";
+            }
+
+        </script> -->
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#taskNumber{
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<input id='input1' type="text"><button id='addButton'>Добавить</button>
+	<ol id='tasks'></ol>
+	<button id='deleteLastTaskButton'>Удалить последнюю добавленную задачу </button><br><br>
+	<input id='taskNumber' type="text"><button id='deleteThisTaskButton'>Удалить задачу с данным номером</button>
+	<script>
+		'use strict';
+		function elFromHTML(string){
+			//Эта функция создаёт новый HTML-элемент на основе HTML-кода в строке string, и возвращает его.
+			let template=document.createElement('template');
+			template.innerHTML=string;
+			return template.content.firstElementChild
+		}
+		/* 7. При нажатии кнопки "Добавить" текст из поля input добавляется к списку задач
+		Пригодится: самописная функция elFromHTML(), метод append(), конкатенация строк (оператор +)
+ 		*/	
+		function addTask(){
+			/* let taskText=input1.value;
+			let HTMLString=`<div>${taskText}</div>`;
+			//let HTMLString='<div>'+taskText+'</div>';
+			let newDiv=elFromHTML(HTMLString);
+			tasks.append(newDiv); */
+         let newTask=elFromHTML('<li>)
+			tasks.append(elFromHTML(`<li>${input1.value}</li>`));
+			input1.value='';
+		}
+		addButton.onclick=addTask;
+		input1.onkeydown=function(event){
+			if(event.code==='Enter'){
+				addTask();
+				//console.log('нажали Enter')
+			}
+		}
+		/* 8. Сделать так, чтобы задачи автоматически нумеровались.
+		Пригодится: элементы ol, li */
+
+		/* 9. Сделать кнопку "Удалить последнюю добавленную задачу".
+		Пригодится: свойство lastElementChild, метод remove()
+ 		*/
+		 deleteLastTaskButton.onclick=function(){
+			tasks.lastElementChild.remove();
+		}
+		/* 10. Сделать кнопку "Удалить задачу с выбранным номером", которая удаляет задачу с номером, введённым в специальное поле input.
+		Пригодится: свойство children, обращение по индексу
+		*/
+		deleteThisTaskButton.onclick=function(){
+			let numberToDelete=taskNumber.value;
+			let elementToDelete=tasks.children[numberToDelete-1];
+			elementToDelete.remove();
+		}
+		/* 11. Каждая задача должна добавляться вместе с кнопкой "Удалить", которая удаляет эту задачу. */
+		
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+Некоторые HTML теги, которые могут пригодиться:
+
+a
+b
+div
+h1
+h3
+img
+ul
+li
+
+Некоторые CSS свойства, которые могут пригодиться:
+
+font-size
+font-family
+font-style: italic;
+line-height
+color
+text-align
+
+margin
+padding
+max-width
+
+background
+
+display

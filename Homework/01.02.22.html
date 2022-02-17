@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            input{
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>При нажатии кнопки текст из поля input перемещается в заданный элемент.</div><br>
+        <div id="text">My favorite animal is <span id="val">dog</span></div>
+        <label><input type="text" placeholder="Введите Ваше любимое животное" id="inputText">
+            <button id="buttonChangeText">Изменить текст</button>
+        </label>
+        <script>
+        'use strict'; 
+        function changeText(){
+            val.innerHTML=inputText.value;
+        }
+        buttonChangeText.onclick=changeText;
+        </script>
+    </body>
+</html>
